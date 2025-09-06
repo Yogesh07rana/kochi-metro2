@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Metro - Train Maintenance System</title>
+    <meta name="description" content="Delhi Metro Train Maintenance Management System - Manage 25 trains across Service, Standby, Washing, and Maintenance statuses">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Kochi Metro</h1>
+            <p>Train Maintenance Management System</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Status Overview -->
+        <section class="status-overview">
+            <div class="status-card" data-status="service">
+                <div class="status-icon service">
+                    <span class="count" id="service-count">0</span>
+                </div>
+                <div class="status-label">Service</div>
+                <div class="status-percentage" id="service-percentage">0%</div>
+            </div>
+            
+            <div class="status-card" data-status="standby">
+                <div class="status-icon standby">
+                    <span class="count" id="standby-count">0</span>
+                </div>
+                <div class="status-label">Standby</div>
+                <div class="status-percentage" id="standby-percentage">0%</div>
+            </div>
+            
+            <div class="status-card" data-status="washing">
+                <div class="status-icon washing">
+                    <span class="count" id="washing-count">0</span>
+                </div>
+                <div class="status-label">Washing</div>
+                <div class="status-percentage" id="washing-percentage">0%</div>
+            </div>
+            
+            <div class="status-card" data-status="maintenance">
+                <div class="status-icon maintenance">
+                    <span class="count" id="maintenance-count">0</span>
+                </div>
+                <div class="status-label">Maintenance</div>
+                <div class="status-percentage" id="maintenance-percentage">0%</div>
+            </div>
+        </section>
+
+        <!-- Filter Buttons -->
+        <section class="filter-section">
+            <button class="filter-btn active" data-filter="all" id="filter-all">
+                All Trains (<span id="all-count">25</span>)
+            </button>
+            <button class="filter-btn" data-filter="service" id="filter-service">
+                Service (<span id="filter-service-count">0</span>)
+            </button>
+            <button class="filter-btn" data-filter="standby" id="filter-standby">
+                Standby (<span id="filter-standby-count">0</span>)
+            </button>
+            <button class="filter-btn" data-filter="washing" id="filter-washing">
+                Washing (<span id="filter-washing-count">0</span>)
+            </button>
+            <button class="filter-btn" data-filter="maintenance" id="filter-maintenance">
+                Maintenance (<span id="filter-maintenance-count">0</span>)
+            </button>
+        </section>
+
+        <!-- Trains Grid -->
+        <section class="trains-grid" id="trains-grid">
+            <!-- Train cards will be dynamically generated here -->
+        </section>
+
+        <!-- No Results Message -->
+        <div class="no-results" id="no-results" style="display: none;">
+            <p>No trains found for the selected filter.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
